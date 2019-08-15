@@ -1,0 +1,163 @@
+{
+  "version": "0.36.0",
+  "artifacts": {
+    "StaticSiteStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://067006100866/us-east-1",
+      "properties": {
+        "templateFile": "StaticSiteStack.template.json"
+      },
+      "metadata": {
+        "/StaticSiteStack/MyOriginAccess": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyOriginAccess",
+            "trace": [
+              "new StaticSiteStack (/Users/stevenwallace/code/codevlabs/static-site/lib/static-site-stack.ts:14:34)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/bin/static-site.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Module.m._compile (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/corporate.codevlabs.io/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "corporatecodevlabsio43611985",
+            "trace": [
+              "new Bucket (/Users/stevenwallace/code/codevlabs/static-site/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:935:22)",
+              "new StaticSiteStack (/Users/stevenwallace/code/codevlabs/static-site/lib/static-site-stack.ts:20:29)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/bin/static-site.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Module.m._compile (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/corporate.codevlabs.io/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "corporatecodevlabsioPolicyF6B7DE8D",
+            "trace": [
+              "new BucketPolicy (/Users/stevenwallace/code/codevlabs/static-site/node_modules/@aws-cdk/aws-s3/lib/bucket-policy.ts:32:5)",
+              "Bucket.addToResourcePolicy (/Users/stevenwallace/code/codevlabs/static-site/node_modules/@aws-cdk/aws-s3/lib/bucket.ts:346:21)",
+              "new StaticSiteStack (/Users/stevenwallace/code/codevlabs/static-site/lib/static-site-stack.ts:21:21)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/bin/static-site.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Module.m._compile (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/MyDistribution/CFDistribution": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyDistributionCFDistributionDE147309",
+            "trace": [
+              "new CloudFrontWebDistribution (/Users/stevenwallace/code/codevlabs/static-site/node_modules/@aws-cdk/aws-cloudfront/lib/web_distribution.ts:699:26)",
+              "new StaticSiteStack (/Users/stevenwallace/code/codevlabs/static-site/lib/static-site-stack.ts:27:26)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/bin/static-site.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Module.m._compile (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/StaticSiteStack/CNAME/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CNAMEC70A2D52",
+            "trace": [
+              "new RecordSet (/Users/stevenwallace/code/codevlabs/static-site/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:122:23)",
+              "new CnameRecord (/Users/stevenwallace/code/codevlabs/static-site/node_modules/@aws-cdk/aws-route53/lib/record-set.ts:209:5)",
+              "new StaticSiteStack (/Users/stevenwallace/code/codevlabs/static-site/lib/static-site-stack.ts:46:5)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/bin/static-site.ts:8:1)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Module.m._compile (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:473:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/index.ts:476:12)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "Object.<anonymous> (/Users/stevenwallace/code/codevlabs/static-site/node_modules/ts-node/src/bin.ts:158:12)",
+              "Module._compile (internal/modules/cjs/loader.js:774:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:785:10)",
+              "Module.load (internal/modules/cjs/loader.js:641:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:556:12)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:837:10)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.3.0",
+      "@aws-cdk/cx-api": "1.3.0",
+      "@aws-cdk/aws-s3": "1.3.0",
+      "@aws-cdk/aws-events": "1.3.0",
+      "@aws-cdk/aws-iam": "1.3.0",
+      "@aws-cdk/region-info": "1.3.0",
+      "@aws-cdk/aws-kms": "1.3.0",
+      "@aws-cdk/aws-cloudfront": "1.3.0",
+      "@aws-cdk/aws-route53": "1.3.0",
+      "@aws-cdk/aws-certificatemanager": "1.3.0",
+      "@aws-cdk/aws-cloudformation": "1.3.0",
+      "@aws-cdk/aws-lambda": "1.3.0",
+      "@aws-cdk/aws-cloudwatch": "1.3.0",
+      "@aws-cdk/aws-ec2": "1.3.0",
+      "@aws-cdk/aws-ssm": "1.3.0",
+      "@aws-cdk/aws-sqs": "1.3.0",
+      "@aws-cdk/aws-s3-assets": "1.3.0",
+      "@aws-cdk/assets": "1.3.0",
+      "jsii-runtime": "node.js/v12.3.1"
+    }
+  }
+}

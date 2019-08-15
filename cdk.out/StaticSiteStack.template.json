@@ -1,0 +1,148 @@
+{
+  "Resources": {
+    "MyOriginAccess": {
+      "Type": "AWS::CloudFront::CloudFrontOriginAccessIdentity",
+      "Properties": {
+        "CloudFrontOriginAccessIdentityConfig": {
+          "Comment": "access-identity-corporate.codevlabs.io.s3.us-east-1.amazonaws.com"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "StaticSiteStack/MyOriginAccess"
+      }
+    },
+    "corporatecodevlabsio43611985": {
+      "Type": "AWS::S3::Bucket",
+      "Properties": {
+        "BucketName": "corporate.codevlabs.io"
+      },
+      "UpdateReplacePolicy": "Retain",
+      "DeletionPolicy": "Retain",
+      "Metadata": {
+        "aws:cdk:path": "StaticSiteStack/corporate.codevlabs.io/Resource"
+      }
+    },
+    "corporatecodevlabsioPolicyF6B7DE8D": {
+      "Type": "AWS::S3::BucketPolicy",
+      "Properties": {
+        "Bucket": {
+          "Ref": "corporatecodevlabsio43611985"
+        },
+        "PolicyDocument": {
+          "Statement": [
+            {
+              "Action": "s3:GetObject",
+              "Effect": "Allow",
+              "Principal": {
+                "AWS": {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:",
+                      {
+                        "Ref": "AWS::Partition"
+                      },
+                      ":iam::067006100866:root"
+                    ]
+                  ]
+                }
+              },
+              "Resource": {
+                "Fn::Join": [
+                  "",
+                  [
+                    {
+                      "Fn::GetAtt": [
+                        "corporatecodevlabsio43611985",
+                        "Arn"
+                      ]
+                    },
+                    "/index.html"
+                  ]
+                ]
+              }
+            }
+          ],
+          "Version": "2012-10-17"
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "StaticSiteStack/corporate.codevlabs.io/Policy/Resource"
+      }
+    },
+    "MyDistributionCFDistributionDE147309": {
+      "Type": "AWS::CloudFront::Distribution",
+      "Properties": {
+        "DistributionConfig": {
+          "Aliases": [
+            "www.codevlabs.io"
+          ],
+          "CacheBehaviors": [],
+          "DefaultCacheBehavior": {
+            "AllowedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "CachedMethods": [
+              "GET",
+              "HEAD"
+            ],
+            "ForwardedValues": {
+              "Cookies": {
+                "Forward": "none"
+              },
+              "QueryString": false
+            },
+            "TargetOriginId": "origin1",
+            "ViewerProtocolPolicy": "redirect-to-https"
+          },
+          "DefaultRootObject": "index.html",
+          "Enabled": true,
+          "HttpVersion": "http2",
+          "IPV6Enabled": true,
+          "Origins": [
+            {
+              "DomainName": {
+                "Fn::GetAtt": [
+                  "corporatecodevlabsio43611985",
+                  "RegionalDomainName"
+                ]
+              },
+              "Id": "origin1",
+              "S3OriginConfig": {}
+            }
+          ],
+          "PriceClass": "PriceClass_100",
+          "ViewerCertificate": {
+            "AcmCertificateArn": "arn:aws:acm:us-east-1:067006100866:certificate/a5d303ae-0d5f-46ce-b125-69f99941a5d2",
+            "MinimumProtocolVersion": "SSLv3",
+            "SslSupportMethod": "vip"
+          }
+        }
+      },
+      "Metadata": {
+        "aws:cdk:path": "StaticSiteStack/MyDistribution/CFDistribution"
+      }
+    },
+    "CNAMEC70A2D52": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "Name": "www.codevlabs.io.",
+        "Type": "CNAME",
+        "HostedZoneId": "/hostedzone/Z375FL6GOW6MQF",
+        "ResourceRecords": [
+          {
+            "Fn::GetAtt": [
+              "MyDistributionCFDistributionDE147309",
+              "DomainName"
+            ]
+          }
+        ],
+        "TTL": "1800"
+      },
+      "Metadata": {
+        "aws:cdk:path": "StaticSiteStack/CNAME/Resource"
+      }
+    }
+  }
+}
