@@ -45,7 +45,7 @@ export class StaticSiteStack extends cdk.Stack {
         acmCertRef: certificate.certificateArn,
             names: [`${environment.subdomainName}.${environment.domainName}`],
             securityPolicy: cloudfront.SecurityPolicyProtocol.SSL_V3,
-            sslMethod: cloudfront.SSLMethod.VIP
+            sslMethod: cloudfront.SSLMethod.SNI
       }
     });
 
